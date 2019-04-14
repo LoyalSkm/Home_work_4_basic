@@ -8,7 +8,7 @@ def chin_calen():
     YEAR = ["Обезьяны", "Петуха", "Собаки",
             "Свиньи", "Крысы", "Быка",
             "Тигра", "Кролика", "Дакона",
-            "Змеи", "Лошади", "Овцаы"
+            "Змеи", "Лошади", "Овцы"
             ]
     COLOR = ["Металическ", "Водян", "Деревянн", "Огненн", "Землян"]
     value = input("Введите интерисующие даты через запятую, в формате (123, 321): ")
@@ -23,12 +23,10 @@ def chin_calen():
             if calc_col in (4, 5): color_poz = 2
             if calc_col in (6, 7): color_poz = 3
             if calc_col in (8, 9): color_poz = 4
-            if calc_year in (0, 2, 3, 4, 9, 10, 11):
-                podj_poz = "ой"
-            elif calc_year in (1, 5, 6) and color_poz == 1:
+            if calc_year in (1, 5, 6, 8):
                 podj_poz = "ого"
             else:
-                podj_poz = "ого"
+                podj_poz = "ой"
             china_value = ("Год " + str(COLOR[color_poz]) + podj_poz + " " + str(YEAR[calc_year]))
         except:
             china_value = "Не верная форма заполнения"
