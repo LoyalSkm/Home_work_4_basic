@@ -13,7 +13,6 @@ def chin_calen():
     COLOR = ["Металическ", "Водян", "Деревянн", "Огненн", "Землян"]
     value = input("Введите интерисующие даты через запятую, в формате (1991, 1992): ")
     china_keys = value.split(", ")   #делим по запятой строку на список
-    data = {}
     for i in china_keys:
         try:
             pozition = int(i)
