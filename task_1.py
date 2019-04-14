@@ -34,6 +34,6 @@ def chin_calen():
         res = {i: china_value}
         my_dict[i] = china_value
         print(res)
-    print(my_dict)
+    # print(my_dict)
 
 chin_calen()
