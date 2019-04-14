@@ -12,12 +12,13 @@ def chin_calen():
             ]
     COLOR = ["Металическ", "Водян", "Деревянн", "Огненн", "Землян"]
     value = input("Введите интерисующие даты через запятую, в формате (1991, 1992): ")
-    china_keys = value.split(", ")   #делим по запятой строку на список
+    china_keys = value.replace(" ", "").split(",")   #делим по запятой строку на список
+    my_dict = {}
     for i in china_keys:
         try:
-            pozition = int(i)
-            calc_col = (pozition % 10)
-            calc_year = (pozition % 12)
+            position = int(i)
+            calc_col = (position % 10)
+            calc_year = (position % 12)
             if calc_col in (0, 1): color_poz = 0
             if calc_col in (2, 3): color_poz = 1
             if calc_col in (4, 5): color_poz = 2
@@ -31,7 +32,8 @@ def chin_calen():
         except:
             china_value = "Не верная форма заполнения"
         res = {i: china_value}
+        my_dict[i] = china_value
         print(res)
-
+    print(my_dict)
 
 chin_calen()
